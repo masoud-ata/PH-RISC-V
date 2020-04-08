@@ -12,7 +12,7 @@ It is fully synthesizable, and to demostrate functionalty the program memory is 
 
 ![fib](https://user-images.githubusercontent.com/54315689/78827646-b9cd5480-79e3-11ea-9799-987ccbeec5f5.png)
 
-To understand the binary code you can check out the assembly code in the file fibonacci.rvi, and if you are interested you can use the following assmbler to modify the assembly code and generate the binary sequence to feed into the program memory:
+To understand the binary code you can check out the assembly code in the file fibonacci.rvi, and if you are interested you can use the following assmbler to modify the assembly code and generate the binary sequence to feed into the program memory (instruction_mem.mem file located in the design directory):
 https://github.com/metastableB/RISCV-RV32I-Assembler
 
 ## Dependencies
