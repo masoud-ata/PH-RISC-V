@@ -14,7 +14,7 @@ entity system is
     port (
         clk: in std_logic;
         reset_n: in std_logic;
-        detection: out std_logic_vector(1 downto 0)       
+        redundant: out std_logic      
     );
 end system;
 
@@ -30,7 +30,7 @@ architecture structural of system is
 
 begin
 
-    cpu: entity work.risc_v 
+    cpu: entity work.ph_risc_v 
         generic map (
             PROGRAM_ADDRESS_WIDTH => PROGRAM_ADDRESS_WIDTH,
             DATA_ADDRESS_WIDTH => DATA_ADDRESS_WIDTH,
@@ -74,22 +74,19 @@ begin
             read_data => data_read
         );
     
+    -- Just added to force the tools not to optimize away the logic
     process (clk)
-        variable det: std_logic_vector(1 downto 0) := "00";
+        variable red: std_logic := '0';
     begin
         if rising_edge(clk) then
             if reset_n = '0' then
-                det := "00";
+                red := '0';
             else
-                if data_write = std_logic_vector(to_unsigned(89, data_write'length)) then
-                    det(0) := '1';
-                end if;
-                if data_write = std_logic_vector(to_unsigned(144, data_write'length)) then
-                    det(1) := '1';
-                end if;
-            end if;
-            
-            detection <= det;
+                for i in data_write'range loop
+                    red := red or data_write(i);
+                end loop;
+            end if;            
+            redundant <= red;
         end if;
     end process;
     

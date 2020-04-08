@@ -24,11 +24,6 @@ architecture behavioral of data_memory is
     
     type ram_type is array (0 to MEMORY_DEPTH-1) of std_logic_vector(DATA_WIDTH-1 downto 0);
     signal ram: ram_type := (
-        0 => "00000000000000000000000000000000",
-        1 => "00000000000000000000000000000001",
-        2 => "00000000000000000000000000000110",
-        3 => "00000000000000000000000000000001",
-        4 => "00000000000000000000000000000001",
         others => "00000000000000000000000000000000"
     );
 
