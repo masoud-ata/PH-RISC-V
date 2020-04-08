@@ -9,6 +9,7 @@ For more information you can check out the book:
 The processor implements simple instructions such as lw, sw, add, sub, and, or. At this moment it supports forwarding, but lacks hazard detection and flushing capabilities.
 
 It is fully synthesizable, and to demostrate functionalty the program memory is loaded with binary code that calulcates the fibonacci series to the 14th element and stores elements 13th and 14th to the data memory. 
+![fib](https://user-images.githubusercontent.com/54315689/78827646-b9cd5480-79e3-11ea-9799-987ccbeec5f5.png)
 
 To understand the binary code you can check out the assembly code in the file fibonacci.rvi, and if you are interested you can use the following assmbler to modify the assembly code and generate the binary sequence to feed into the program memory:
 https://github.com/metastableB/RISCV-RV32I-Assembler
