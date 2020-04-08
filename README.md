@@ -8,7 +8,9 @@ for more information you can check out the book:
 
 The processor implements simple instructions such as lw, sw, add, sub, and, or. 
 
-It is fully synthesizable and to demostrate functionalty the program memory is loaded with a binary code that calulcates the fibonacci series to the 14th element and stores elements 13th and 14th to the memory. To understand the binary code you can check out the assembly code in the file fibonacci.rvi, and if you are interested you can use the assmbler here to modify the assembly code and generate the binary to feed into the program memory:
+It is fully synthesizable and to demostrate functionalty the program memory is loaded with binary code that calulcates the fibonacci series to the 14th element and stores elements 13th and 14th to the data memory. 
+
+To understand the binary code you can check out the assembly code in the file fibonacci.rvi, and if you are interested you can use the following assmbler to modify the assembly code and generate the binary sequence to feed into the program memory:
 https://github.com/metastableB/RISCV-RV32I-Assembler
 
 ## Dependencies
