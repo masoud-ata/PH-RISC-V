@@ -14,4 +14,4 @@ To understand the binary code you can check out the assembly code in the file fi
 https://github.com/metastableB/RISCV-RV32I-Assembler
 
 ## Dependencies
-Just add the files in the design directory to source list of the sythesis tool (e.g. Xilinx Vivado) and you're good to go.
+Just add the files in the design directory to the source list of your sythesis tool (e.g. Xilinx Vivado) and you're good to go.
